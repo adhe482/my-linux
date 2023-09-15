@@ -1,0 +1,18 @@
+Klik 
+SSL Support
+Lets Encrypt Support
+
+Lalu edit .htaccess
+
+Tambahkan
+
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule (.) https%{HTTP_HOST}%{REQUEST_URI} [R,L]
+
+
+How to redirect HTTP to HTTPS using htaccess
+You can automatically redirect visitors to the secured (HTTPS) version of your site to make sure your communications are encrypted by using following .htaccess file
+
+
+httpsvestacp.comdocs#how-to-force-https

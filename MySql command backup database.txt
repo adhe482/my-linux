@@ -1,0 +1,19 @@
+https://www.tecmint.com/mysql-backup-and-restore-commands-for-database-administration/
+
+Show databases;
+
+DROP DATABASE databasename;
+
+
+How to Backup Single Table of Database?
+# mysqldump -u root data_db > data_db.sql
+
+Cara copy file .sql
+scp -r data_db.sql/ root@masterku.ddns.net:/var/www/
+
+mysqldump  -u root -p data_db > data_db-1507.sql
+Pass Ppp4321
+
+Restore erp_db cyberpanel
+mysql erp_db > erp
+
