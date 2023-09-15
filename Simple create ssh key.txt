@@ -1,0 +1,34 @@
+Cara ke-3 - simple bro
+Membuat key pair ssh keygen ubuntu
+Yang kita mau ssh adalah client-server ub37
+
+Pertama kita generate key pair dari remote-server ub38
+
+Generate key
+# ssh-keygen -t rsa -f ~/.ssh/ub377
+ssh-keygen -t rsa -f ~/.ssh/smesco0923
+=Next enter 
+
+=Lihat hasil di #ll .ssh
+root@ub38:~/.ssh# ll
+total 16
+drwx------ 2 root root 4096 May 28 14:48 ./
+drwx------ 5 root root 4096 May 28 10:04 ../
+-rw------- 1 root root    0 Mar  3  2020 authorized_keys
+
+-rw------- 1 root root 1811 May 28 14:48 ub377
+-rw-r--r-- 1 root root  391 May 28 14:48 ub377.pub
+
+Copy kedua file tersebut ke server client
+scp smesco0923 root@192.168.60.43:~/.ssh
+scp smesco0923.pub root@192.168.60.43:~/.ssh
+
+Jalankan perintah di client-server
+# cat smesco0923.pub >> authorized_keys 
+Untuk user root
+
+# ssh ub377
+
+Ubah PasswordAuthentication no
+
+selesai
